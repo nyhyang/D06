@@ -22,19 +22,37 @@
 # Body
 
 
-def avoids():
+def avoids(word, badword):
     """ return True if word NOT forbidden"""
-    ...
+    for letter in word:
+        if badword in letter:
+            return False
+        else:
+            return True
 
 
-def forbidden_prompt():
+def forbidden_prompt(user_input, user_buzzword):
     """ print count of words NOT forbidden by input"""
-    ...
+    user_buzzword = input("Please type in anything you want to filter:")
+    user_input = input("Feel freee to type in anything and I'll let you know: ")
+    user_input_list = user_input.split()
+    count = 0 
+    for words in user_input_list:
+        if badword not in words:
+            count += 1
+    print(count)
 
 
-def forbidden_param():
+
+def forbidden_param(user_input, badword):
     """ return count of words NOT forbidden by param"""
-    ...
+    user_input = input("Please type in some bad words: ")
+    user_input_list = user_input.split()
+    count = 0 
+    for words in user_input_list:
+        if badword in words:
+            count += 1
+    print(count)
 
 
 def find_five():

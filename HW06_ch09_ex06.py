@@ -14,10 +14,28 @@
 
 # Body
 
+def is_abecedarian(word):
+	previous_letter = word[0]
+	for letter in word:
+		if letter < previous:
+			return False
+		previous = letter 
+	return True
+
+def cal_abecedarian(wordlst):
+	with open('words.txt', 'r') as f:
+		word_lists = f.read().strip()
+	
+	total_count = 0
+	for word in wordlst:
+		if is_abecedarian(word):
+			total_count += 1
+	return total_count
+
 
 ##############################################################################
 def main():
-    pass  # Call your function(s) here.
+    cal_abecedarian(word_lists)
 
 if __name__ == '__main__':
     main()

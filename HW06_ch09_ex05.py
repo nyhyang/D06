@@ -17,10 +17,40 @@
 
 # Body
 
+def uses_all(word, letters):
+	count = 0 
+	for letter in letters:
+		if letter in word:
+			count += 1
+	if count == len(letters):
+		return True
+	return False
+
+
+def uses_all_vowels(lst):
+	count = 0 
+	vowels = 'aeiou'
+	for word in lst:
+		if uses_all(word, vowels):
+			count += 1
+	return count
+
+def uses_all_vowels_y(lst):
+	count = 0 
+	vowels_y = 'aeiouy'
+	for word in lst:
+		if uses_all(word, vowels_y):
+			count += 1
+	return count
+
+
+
 
 ##############################################################################
 def main():
-    pass  # Call your function(s) here.
+    
+    print(uses_all("hello", "eo"))
+    print(uses_all_vowels(['aeioussss', 'hellp']))
 
 if __name__ == '__main__':
     main()

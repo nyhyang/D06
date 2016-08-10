@@ -15,10 +15,38 @@
 
 # Body
 
+def has_no_e(word):
+	for letter in word:
+		if "e" in letter:
+			return False
+		else:
+			return True
+
+
+def print_no_e(wordlists):
+	list_length = len(wordlists)
+
+	count = 0
+	with_no_elist = []
+	for words in wordlists:
+		if 'e' in words:
+			count += 1
+			with_no_elist.append(words)
+			percent = (1 - (count / list_length)) * 100
+			
+	print(with_no_elist)
+	print("There is {} percent of the word that has no e".format(percent))
+
+
+
+
 
 ##############################################################################
 def main():
-    pass  # Call your function(s) here.
+	
+
+    # has_no_e("hello")
+    print_no_e(['aloha', 'hello', 'yell'])
 
 if __name__ == '__main__':
     main()
