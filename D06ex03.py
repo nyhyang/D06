@@ -1,8 +1,4 @@
 
-
-
-
-
 def find_letter(letter):
 	with open('roster.txt', 'r') as f:
 		data = f.read()
@@ -22,15 +18,7 @@ def find_letter(letter):
 
 def main():
 
-
-
 	print(find_letter('e'))
-
-			
-
-
-
-
 
 
 if __name__ == '__main__':

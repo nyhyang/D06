@@ -18,12 +18,10 @@ def find_letter(letter):
 	print(name_with_e)
 
 
-
 	newfile = open('newfile.txt', 'w')
 	for name in name_with_e:
 		newfile.write(name + '\n')
 	newfile.write(str(count))
-
 
 def main():
 

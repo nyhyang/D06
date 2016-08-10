@@ -32,7 +32,6 @@ def cal_abecedarian(wordlst):
 			total_count += 1
 	return total_count
 
-
 ##############################################################################
 def main():
     cal_abecedarian(word_lists)
